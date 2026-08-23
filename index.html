@@ -344,6 +344,47 @@ html[data-theme="dark"] .eq .heart{color:#e08da0}
 .link-card:hover .go{opacity:1;transform:rotate(45deg) scale(1.1);background:var(--md-primary-container);color:var(--md-on-primary-container)}
 .link-card .go .ic{width:17px;height:17px}
 
+/* ---------- Project ---------- */
+.project-card{
+  position:relative;overflow:hidden;display:flex;align-items:center;gap:22px;
+  padding:30px 28px;border-radius:var(--radius-xl);
+  background:linear-gradient(115deg,
+    color-mix(in srgb, var(--md-primary-container) 86%, var(--md-surface-container-low)),
+    color-mix(in srgb, var(--md-tertiary-container) 84%, var(--md-surface-container-low)) 52%,
+    color-mix(in srgb, var(--md-secondary-container) 86%, var(--md-surface-container-low)));
+  background-size:170% 100%;background-position:0% 0;
+  color:var(--md-on-primary-container);
+  box-shadow:var(--elev-1);
+  transition:transform .55s var(--ease-spring), border-radius .55s var(--ease-spring),
+             box-shadow .4s, background-position .9s var(--ease-standard);
+}
+.project-card:hover{transform:translateY(-5px);border-radius:40px;box-shadow:var(--elev-3);background-position:75% 0}
+.project-card:active{transform:translateY(-1px) scale(.985);transition-duration:.08s}
+.pj-blob{position:absolute;border-radius:50%;filter:blur(46px);opacity:.5;pointer-events:none;transition:opacity .4s}
+html[data-theme="dark"] .pj-blob{opacity:.32}
+.pj-b1{width:190px;height:190px;right:6%;top:-92px;background:radial-gradient(circle,var(--md-primary) 0%,transparent 70%);animation:pjfloat 7s ease-in-out infinite alternate}
+.pj-b2{width:150px;height:150px;left:24%;bottom:-84px;background:radial-gradient(circle,var(--md-tertiary) 0%,transparent 70%);animation:pjfloat 9s ease-in-out infinite alternate-reverse}
+@keyframes pjfloat{to{transform:translate(16px,12px) scale(1.12)}}
+.pj-icon{position:relative;width:78px;height:78px;border-radius:26px;display:grid;place-items:center;flex:none;
+  background:color-mix(in srgb, var(--md-surface-container-lowest) 55%, transparent);
+  color:var(--md-primary);
+  transition:transform .55s var(--ease-spring), border-radius .55s var(--ease-spring), background-color .3s}
+.project-card:hover .pj-icon{transform:rotate(-8deg) scale(1.06);border-radius:50%}
+.pj-icon .ic{width:36px;height:36px}
+.pj-body{position:relative;min-width:0;flex:1}
+.pj-body b{display:block;font-size:clamp(19px,2.5vw,24px);font-weight:800;letter-spacing:.2px}
+.pj-body i{display:block;font-style:normal;font-size:13px;opacity:.78;margin-top:4px;line-height:1.55}
+.pj-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.pj-tag{font-size:11.5px;font-weight:700;letter-spacing:.05em;padding:5px 11px;border-radius:var(--radius-full);
+  background:color-mix(in srgb, var(--md-surface-container-lowest) 52%, transparent);
+  transition:transform .4s var(--ease-spring)}
+.pj-tag:hover{transform:translateY(-2px) scale(1.05)}
+.pj-go{position:relative;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:var(--md-primary);color:var(--md-on-primary);box-shadow:var(--elev-1);
+  transition:transform .55s var(--ease-spring), box-shadow .35s}
+.project-card:hover .pj-go{transform:rotate(45deg) scale(1.08);box-shadow:var(--elev-2)}
+.pj-go .ic{width:24px;height:24px}
+
 /* ---------- Other Resources ---------- */
 .empty-card{
   border:1.6px dashed var(--md-outline-variant);border-radius:var(--radius-xl);
@@ -408,6 +449,11 @@ html.js .reveal.in{opacity:1;transform:none}
   .layout{padding:0 16px}
   #themeBtn{top:12px;right:12px;width:46px;height:46px;border-radius:23px}
   .contacts{gap:10px}
+  .project-card{gap:15px;padding:22px 19px}
+  .pj-icon{width:62px;height:62px;border-radius:21px}
+  .pj-icon .ic{width:29px;height:29px}
+  .pj-go{width:48px;height:48px}
+  .pj-tags{display:none}
 }
 /* ---------- 减少动态偏好 ---------- */
 @media (prefers-reduced-motion: reduce){
@@ -442,6 +488,8 @@ html.js .reveal.in{opacity:1;transform:none}
   <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
   <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
   <symbol id="i-game" viewBox="0 0 24 24"><line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/><line x1="15" x2="15.01" y1="12" y2="12"/><line x1="18" x2="18.01" y1="10" y2="10"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+  <symbol id="i-git-branch" viewBox="0 0 24 24"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></symbol>
   <symbol id="i-pear" viewBox="0 0 24 24"><path d="M12 7c-.3-2 .6-3.6 2.2-4.2"/><path d="M15.8 5.6c-1.9-.3-3.1.3-3.8 2.1 1.9.3 3.1-.3 3.8-2.1z"/><path d="M12 8.5c-3.2 2.4-5.2 4.6-5.2 7.2 0 3.1 2.3 5.3 5.2 5.3s5.2-2.2 5.2-5.3c0-2.6-2-4.8-5.2-7.2z"/></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></symbol>
 </svg>
@@ -535,7 +583,7 @@ html.js .reveal.in{opacity:1;transform:none}
         <a class="contact-pill" data-ripple href="https://github.com/lingyicute" target="_blank" rel="noopener" aria-label="GitHub">
           <svg class="ic"><use href="#i-github"/></svg><span class="label">GitHub</span>
         </a>
-        <a class="contact-pill" data-ripple href="mailto:lingyicute@gmail.com" aria-label="Email">
+        <a class="contact-pill" data-ripple href="/cdn-cgi/l/email-protection#86eaefe8e1ffefe5f3f2e3c6e1ebe7efeaa8e5e9eb" aria-label="Email">
           <svg class="ic"><use href="#i-mail"/></svg><span class="label">Email</span>
         </a>
         <a class="contact-pill" data-ripple href="https://t.me/lingyicute2323" target="_blank" rel="noopener" aria-label="Telegram">
@@ -583,6 +631,29 @@ html.js .reveal.in{opacity:1;transform:none}
       </div>
     </section>
 
+    <!-- ================= Project ================= -->
+    <section id="project">
+      <div class="sec-head reveal" style="--i:0">
+        <span class="tile-ic" style="background:var(--md-secondary-container);color:var(--md-on-secondary-container)"><svg class="ic"><use href="#i-layers"/></svg></span>
+        <div><h3>Project</h3><small>我的开源存储库陈列</small></div>
+      </div>
+      <a class="project-card reveal" style="--i:1" data-ripple href="https://opensource.92li.uk" target="_blank" rel="noopener" aria-label="前往开源存储库陈列页面 opensource.92li.uk">
+        <span class="pj-blob pj-b1" aria-hidden="true"></span>
+        <span class="pj-blob pj-b2" aria-hidden="true"></span>
+        <span class="pj-icon" aria-hidden="true"><svg class="ic"><use href="#i-git-branch"/></svg></span>
+        <span class="pj-body">
+          <b>Open Source Gallery</b>
+          <i>opensource.92li.uk · 收录我维护与参与的开源项目、镜像和实验性小玩意</i>
+          <span class="pj-tags">
+            <span class="pj-tag">Android</span>
+            <span class="pj-tag">Linux</span>
+            <span class="pj-tag">Web</span>
+          </span>
+        </span>
+        <span class="pj-go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+    </section>
+
     <!-- ================= Other Resources（留空） ================= -->
     <section id="otherresources">
       <div class="sec-head reveal" style="--i:0">
@@ -608,7 +679,7 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </main>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
 'use strict';
 var root = document.documentElement;
