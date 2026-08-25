@@ -49,6 +49,8 @@
   --md-on-surface-variant:#45483D;
   --md-outline:#75796C; --md-outline-variant:#C5C8BA;
   --md-inverse-surface:#2E3128; --md-inverse-on-surface:#F0F2E6;
+  --md-quaternary-container:#D6E3FF; --md-on-quaternary-container:#001B3F;
+  --md-quinary-container:#EADDFF; --md-on-quinary-container:#21005D;
 
   --elev-1: 0 1px 2px rgba(24,36,5,.07), 0 1px 3px 1px rgba(24,36,5,.05);
   --elev-2: 0 1px 2px rgba(24,36,5,.08), 0 2px 6px 2px rgba(24,36,5,.06);
@@ -83,6 +85,8 @@ html[data-theme="dark"]{
   --md-on-surface-variant:#C4C8B9;
   --md-outline:#8E9285; --md-outline-variant:#44483D;
   --md-inverse-surface:#E1E4D6; --md-inverse-on-surface:#2E3128;
+  --md-quaternary-container:#00497D; --md-on-quaternary-container:#D3E4FF;
+  --md-quinary-container:#4F378B; --md-on-quinary-container:#EADDFF;
 
   --elev-1: 0 1px 2px rgba(0,0,0,.35), 0 1px 3px 1px rgba(0,0,0,.25);
   --elev-2: 0 1px 2px rgba(0,0,0,.4), 0 2px 6px 2px rgba(0,0,0,.3);
@@ -334,6 +338,8 @@ html[data-theme="dark"] .eq .heart{color:#e08da0}
 .tile-2{background:var(--md-tertiary-container);color:var(--md-on-tertiary-container)}
 .tile-3{background:var(--md-secondary-container);color:var(--md-on-secondary-container)}
 .tile-4{background:var(--md-error-container);color:var(--md-on-error-container)}
+.tile-5{background:var(--md-quaternary-container);color:var(--md-on-quaternary-container)}
+.tile-6{background:var(--md-quinary-container);color:var(--md-on-quinary-container)}
 .link-card .meta{min-width:0;flex:1}
 .link-card .meta b{display:block;font-size:15.5px;font-weight:750;letter-spacing:.01em}
 .link-card .meta i{display:block;font-style:normal;font-size:12.5px;color:var(--md-on-surface-variant);margin-top:3px;
@@ -484,6 +490,8 @@ html.js .reveal.in{opacity:1;transform:none}
   <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
   <symbol id="i-key" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-notepad" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><path d="M12 2v4"/><rect width="16" height="18" x="4" y="2" rx="2"/><path d="M8 11h8"/><path d="M8 16h5"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 22a10 10 0 0 0 10-10"/><path d="M2 12h20"/><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2a10 10 0 0 0 0 20"/></symbol>
   <symbol id="i-ghost" viewBox="0 0 24 24"><path d="M9 10h.01"/><path d="M15 10h.01"/><path d="M12 2a8 8 0 0 0-8 8v12l3-3 2 2 3-3 2 2 3-3 3 3V10a8 8 0 0 0-8-8z"/></symbol>
   <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
   <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
@@ -626,6 +634,16 @@ html.js .reveal.in{opacity:1;transform:none}
         <a class="link-card reveal" style="--i:4" data-ripple href="https://co.92li.uk" target="_blank" rel="noopener">
           <span class="tile tile-4"><svg class="ic"><use href="#i-music"/></svg></span>
           <span class="meta"><b>co.92li.uk</b><i>YiClapOnline</i></span>
+          <span class="go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="link-card reveal" style="--i:5" data-ripple href="https://np.92li.uk" target="_blank" rel="noopener">
+          <span class="tile tile-5"><svg class="ic"><use href="#i-notepad"/></svg></span>
+          <span class="meta"><b>np.92li.uk</b><i>小小记事本 Pro</i></span>
+          <span class="go"><svg class="ic"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="link-card reveal" style="--i:6" data-ripple href="https://spin.92li.uk" target="_blank" rel="noopener">
+          <span class="tile tile-6"><svg class="ic"><use href="#i-wheel"/></svg></span>
+          <span class="meta"><b>spin.92li.uk</b><i>随机转盘</i></span>
           <span class="go"><svg class="ic"><use href="#i-arrow"/></svg></span>
         </a>
       </div>
