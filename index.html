@@ -466,7 +466,7 @@ html.js .reveal.in{opacity:1;transform:none}
   .pj-tags{display:none}
 }
 
-.ambient span{will-change:transform;backface-visibility:hidden;transform:translate3d(0,0,0)}
+.ambient span{will-change:transform,translate;backface-visibility:hidden}
 .profile, .snake-card, .link-card, .project-card{contain:layout style}
 html.js .reveal{will-change:opacity,transform}
 html.js .reveal.in{will-change:auto}
@@ -832,7 +832,7 @@ if(fine && blobs.length){
 
     for(var i = 0; i < blobs.length; i++){
       var f = (i + 1) * 14;
-      blobs[i].style.transform = 'translate3d(' + (px * f).toFixed(2) + 'px,' + (py * f).toFixed(2) + 'px,0)';
+      blobs[i].style.translate = (px * f).toFixed(2) + 'px ' + (py * f).toFixed(2) + 'px';  
     }
 
     if(Math.abs(dx) > 0.0001 || Math.abs(dy) > 0.0001){
@@ -939,14 +939,10 @@ function hideLoading(){
   var l = document.getElementById('lyi-loading');
   if(!l || l.classList.contains('bye')) return;
   l.classList.add('bye');
-  setTimeout(function(){ if(l.parentNode) l.remove(); }, 500);
+  setTimeout(function(){ if(l.parentNode) l.remove(); }, 620);
 }
-if(document.readyState === 'complete' || document.readyState === 'interactive'){
-  requestAnimationFrame(hideLoading);
-} else {
-  document.addEventListener('DOMContentLoaded', hideLoading, {once:true});
-}
-setTimeout(hideLoading, 1500);
+addEventListener('load', function(){ setTimeout(hideLoading, 260); });
+setTimeout(hideLoading, 3000);
 })();
 </script>
 </html>
