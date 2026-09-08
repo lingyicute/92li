@@ -1,6 +1,6 @@
 # 92li - best.92li.uk Source Code
 
-The personal website of lingyicute.
+The personal website of lingyicute, Proudly redesigned using Material You design. ❤️
 
 ![image](https://raw.githubusercontent.com/lingyicute/92li/main/screenshot.webp)
 
