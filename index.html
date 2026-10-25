@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>梨のHome · lingyicute's Home</title>
+<title>梨のHome · lingyicute 的个人主页</title>
 <meta name="description" content="lingyicute 的个人主页 — Open Source Enthusiast, Developer & Security Researcher">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7FAEB">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#11140F">
@@ -101,7 +101,10 @@ html[data-theme="dark"]{
 
 /* ============================================================ 基础 */
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
 body{
   font-family: "Nebulove", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   background:var(--md-background); color:var(--md-on-surface);
@@ -546,7 +549,7 @@ html.js .reveal.in{will-change:auto}
 <div class="ambient" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
 
 <!-- 主题切换 -->
-<button id="themeBtn" data-ripple aria-label="切换明暗主题" title="切换主题">
+<button id="themeBtn" data-ripple aria-label="切换深色 / 浅色主题" title="切换主题">
   <svg class="ic sun"><use href="#i-sun"/></svg>
   <svg class="ic moon"><use href="#i-moon"/></svg>
 </button>
@@ -587,7 +590,7 @@ html.js .reveal.in{will-change:auto}
       <div class="timeline">
         <p class="block-label">Timeline</p>
         <div class="tl-item"><span class="dot"></span><p>Launched the original version of this site</p><b>Jan 2025</b></div>
-        <div class="tl-item"><span class="dot"></span><p>Launched the new Material You redesign at here</p><b>Jul 2026</b></div>
+        <div class="tl-item"><span class="dot"></span><p>Unveiled this Material You redesign</p><b>Jul 2026</b></div>
       </div>
     </div>
   </aside>
@@ -656,7 +659,7 @@ html.js .reveal.in{will-change:auto}
         <span class="pj-icon" aria-hidden="true"><svg class="ic"><use href="#i-shield-check"/></svg></span>
         <span class="pj-body">
           <b>ComputeSec 计算安全小助手</b>
-          <i>s.92li.uk · 基于 GTK4 的 Linux 桌面安全评估工具，对照安全基线检查 HSI、内核加固、硬件品牌与使用习惯，用通俗的语言解释风险并提出建议。</i>
+          <i>s.92li.uk · 基于 GTK4 的 Linux 桌面安全评估工具，对照安全基线检查 HSI、内核加固、硬件信息与使用习惯，用说人话的方式解释每条风险，并给出可操作的加固建议。</i>
           <span class="pj-tags">
             <span class="pj-tag">Linux</span>
             <span class="pj-tag">GTK4</span>
@@ -713,7 +716,7 @@ html.js .reveal.in{will-change:auto}
         </a>
         <a class="link-card reveal" style="--i:9" data-ripple href="https://sf.92li.uk" target="_blank" rel="noopener">
           <span class="tile tile-2"><svg class="ic"><use href="#i-folder"/></svg></span>
-          <span class="meta"><b>sf.92li.uk</b><i>StarryFiles 文件管理</i></span>
+          <span class="meta"><b>sf.92li.uk</b><i>StarryFiles 文件管理器</i></span>
           <span class="go"><svg class="ic"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="link-card reveal" style="--i:10" data-ripple href="https://wu.92li.uk" target="_blank" rel="noopener">
@@ -748,7 +751,7 @@ html.js .reveal.in{will-change:auto}
         </a>
         <a class="link-card reveal" style="--i:16" data-ripple href="https://downloader.92li.uk" target="_blank" rel="noopener">
           <span class="tile tile-2"><svg class="ic"><use href="#i-download"/></svg></span>
-          <span class="meta"><b>downloader.92li.uk</b><i>GitHub Action 离线下载</i></span>
+          <span class="meta"><b>downloader.92li.uk</b><i>GitHub Actions 离线下载</i></span>
           <span class="go"><svg class="ic"><use href="#i-arrow"/></svg></span>
         </a>
         <a class="link-card reveal" style="--i:17" data-ripple href="https://ios.92li.uk" target="_blank" rel="noopener">
@@ -763,7 +766,7 @@ html.js .reveal.in{will-change:auto}
     <section id="project">
       <div class="sec-head reveal" style="--i:0">
         <span class="tile-ic" style="background:var(--md-secondary-container);color:var(--md-on-secondary-container)"><svg class="ic"><use href="#i-layers"/></svg></span>
-        <div><h3>More works</h3><small>我的更多开源作品</small></div>
+        <div><h3>More Works & Projects</h3><small>我的更多开源作品</small></div>
       </div>
       <a class="project-card reveal" style="--i:1;margin-bottom:14px" data-ripple href="https://opensource.92li.uk" target="_blank" rel="noopener" aria-label="前往开源存储库陈列页面 opensource.92li.uk">
         <span class="pj-blob pj-b1" aria-hidden="true"></span>
@@ -771,7 +774,7 @@ html.js .reveal.in{will-change:auto}
         <span class="pj-icon" aria-hidden="true"><svg class="ic"><use href="#i-git-branch"/></svg></span>
         <span class="pj-body">
           <b>Open Source Gallery</b>
-          <i>opensource.92li.uk · 收录我维护与参与的开源项目、镜像和实验性小玩意</i>
+          <i>opensource.92li.uk · 收录我维护或参与的开源项目、镜像和实验性小玩意儿</i>
           <span class="pj-tags">
             <span class="pj-tag">Android</span>
             <span class="pj-tag">Linux</span>
@@ -786,7 +789,7 @@ html.js .reveal.in{will-change:auto}
         <span class="pj-icon" aria-hidden="true"><svg class="ic"><use href="#i-game"/></svg></span>
         <span class="pj-body">
           <b>Games Arcade</b>
-          <i>games.92li.uk · 收录一堆即点即玩的网页小游戏，摸鱼专用游戏厅</i>
+          <i>games.92li.uk · 收录一堆即开即玩的网页小游戏，忙碌间隙的摸鱼好去处</i>
           <span class="pj-tags">
             <span class="pj-tag">Arcade</span>
             <span class="pj-tag">Mini Games</span>
@@ -801,7 +804,7 @@ html.js .reveal.in{will-change:auto}
     <section id="otherresources">
       <div class="sec-head reveal" style="--i:0">
         <span class="tile-ic" style="background:var(--md-tertiary-container);color:var(--md-on-tertiary-container)"><svg class="ic"><use href="#i-folder"/></svg></span>
-        <div><h3>Other Resources</h3><small>还没想好放什么</small></div>
+        <div><h3>Other Resources</h3><small>这里先留白，好东西还在路上</small></div>
       </div>
       <div class="empty-card reveal" style="--i:1">
         <span class="ghost"><svg class="ic"><use href="#i-ghost"/></svg></span>
@@ -812,10 +815,10 @@ html.js .reveal.in{will-change:auto}
     <footer class="reveal" style="--i:0">
       <span id="busuanzi_container_site_pv" class="visits-pill" data-ripple>
         <svg class="ic"><use href="#i-activity"/></svg>
-        总访问量 <b id="busuanzi_value_site_pv">···</b> 次
+        小站已被访问 <b id="busuanzi_value_site_pv">···</b> 次
       </span>
       <p class="foot-note">
-        <span>© 2025-2026 lingyicute</span>
+        <span>© 2025-2026 lingyicute · 本页以 AGPL-3.0 开源</span>
       </p>
     </footer>
   </div>
@@ -836,7 +839,7 @@ function applyTheme(t){
 }
 applyTheme(root.dataset.theme || 'light');
 if(snake){
-  snake.addEventListener('error', function(){ if(snakeState) snakeState.textContent = 'snake 走丢了，稍后再来…'; });
+  snake.addEventListener('error', function(){ if(snakeState) snakeState.textContent = '贪吃蛇走丢了，稍后再来看看…'; });
   snake.addEventListener('load', function(){ if(snakeState) snakeState.textContent = 'eating my contributions…'; });
   if('requestIdleCallback' in window){
     requestIdleCallback(function(){
