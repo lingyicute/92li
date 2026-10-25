@@ -369,6 +369,18 @@ html[data-theme="dark"] .eq .heart{color:#e08da0}
              box-shadow .4s, background-position .9s var(--ease-standard);
 }
 .project-card:hover{transform:translateY(-5px);border-radius:40px;box-shadow:var(--elev-3);background-position:75% 0}
+/* Arcade */
+.project-card.pj-arcade{
+  background:linear-gradient(115deg,
+    color-mix(in srgb, var(--md-tertiary-container) 86%, var(--md-surface-container-low)),
+    color-mix(in srgb, var(--md-secondary-container) 84%, var(--md-surface-container-low)) 52%,
+    color-mix(in srgb, color-mix(in srgb, var(--md-quaternary-container) 55%, var(--md-tertiary-container)) 86%, var(--md-surface-container-low)));
+  color:var(--md-on-tertiary-container);
+}
+.project-card.pj-arcade .pj-icon{color:var(--md-tertiary)}
+.project-card.pj-arcade .pj-b1{background:radial-gradient(circle,var(--md-tertiary) 0%,transparent 70%)}
+.project-card.pj-arcade .pj-b2{background:radial-gradient(circle,var(--md-quaternary-container) 0%,transparent 70%)}
+.project-card.pj-arcade .pj-go{background:var(--md-tertiary);color:var(--md-on-tertiary)}
 .project-card:active{transform:translateY(-1px) scale(.985);transition-duration:.08s}
 .pj-blob{position:absolute;border-radius:50%;filter:blur(46px);opacity:.5;pointer-events:none;transition:opacity .4s}
 html[data-theme="dark"] .pj-blob{opacity:.32}
@@ -636,7 +648,7 @@ html.js .reveal.in{will-change:auto}
     <section id="link">
       <div class="sec-head reveal" style="--i:0">
         <span class="tile-ic"><svg class="ic"><use href="#i-link"/></svg></span>
-        <div><h3>Link</h3><small>一些好用的小东西</small></div>
+        <div><h3>Curated for You</h3><small>招牌好物，倾情呈现</small></div>
       </div>
       <a class="project-card reveal" style="--i:1;margin-bottom:14px" data-ripple href="https://s.92li.uk" target="_blank" rel="noopener" aria-label="前往 Linux 桌面安全评估工具 s.92li.uk">
         <span class="pj-blob pj-b1" aria-hidden="true"></span>
@@ -751,9 +763,9 @@ html.js .reveal.in{will-change:auto}
     <section id="project">
       <div class="sec-head reveal" style="--i:0">
         <span class="tile-ic" style="background:var(--md-secondary-container);color:var(--md-on-secondary-container)"><svg class="ic"><use href="#i-layers"/></svg></span>
-        <div><h3>Project</h3><small>我的开源存储库陈列</small></div>
+        <div><h3>More works</h3><small>我的更多开源作品</small></div>
       </div>
-      <a class="project-card reveal" style="--i:1" data-ripple href="https://opensource.92li.uk" target="_blank" rel="noopener" aria-label="前往开源存储库陈列页面 opensource.92li.uk">
+      <a class="project-card reveal" style="--i:1;margin-bottom:14px" data-ripple href="https://opensource.92li.uk" target="_blank" rel="noopener" aria-label="前往开源存储库陈列页面 opensource.92li.uk">
         <span class="pj-blob pj-b1" aria-hidden="true"></span>
         <span class="pj-blob pj-b2" aria-hidden="true"></span>
         <span class="pj-icon" aria-hidden="true"><svg class="ic"><use href="#i-git-branch"/></svg></span>
@@ -763,6 +775,21 @@ html.js .reveal.in{will-change:auto}
           <span class="pj-tags">
             <span class="pj-tag">Android</span>
             <span class="pj-tag">Linux</span>
+            <span class="pj-tag">Web</span>
+          </span>
+        </span>
+        <span class="pj-go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="project-card pj-arcade reveal" style="--i:2" data-ripple href="https://games.92li.uk" target="_blank" rel="noopener" aria-label="前往网页游戏厅 Arcade games.92li.uk">
+        <span class="pj-blob pj-b1" aria-hidden="true"></span>
+        <span class="pj-blob pj-b2" aria-hidden="true"></span>
+        <span class="pj-icon" aria-hidden="true"><svg class="ic"><use href="#i-game"/></svg></span>
+        <span class="pj-body">
+          <b>Games Arcade</b>
+          <i>games.92li.uk · 收录一堆即点即玩的网页小游戏，摸鱼专用游戏厅</i>
+          <span class="pj-tags">
+            <span class="pj-tag">Arcade</span>
+            <span class="pj-tag">Mini Games</span>
             <span class="pj-tag">Web</span>
           </span>
         </span>
